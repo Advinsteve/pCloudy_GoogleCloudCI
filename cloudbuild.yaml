@@ -1,8 +1,8 @@
 steps:
-  - name: 'gcr.io/cloud-builders/node:20'
-    args: ['npm', 'install']
-  - name: 'gcr.io/cloud-builders/node'
-    args: ['npm', 'run', 'android']
-    
-images:
-  - 'gcr.io/rational-lambda-386109/pcloudy-image'
+  # Pull the latest Node.js image from Docker Hub
+  - name: 'node:latest'
+    entrypoint: 'sh'
+    args:
+      - '-c'
+      # Install project dependencies
+      - 'npm install && npm run android'
