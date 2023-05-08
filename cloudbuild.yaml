@@ -5,4 +5,4 @@ steps:
     args: ['npm', 'run', 'android']
     
 images:
-  - 'gcr.io/My First Project/pcloudy-image'
+  - 'gcr.io/rational-lambda-386109/pcloudy-image'
